@@ -162,3 +162,20 @@
 
   }
 }
+
+/**************** CONSULTATION ***************/
+
+.consultation {
+  min-height: 680px;
+  background: url(../../img/section_bgr.jpg) center (center/cover) no-repeat;
+  padding: 100px 0 91px 0;
+
+  &__descr {
+    width: 365px;
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 35px;
+  }
+}

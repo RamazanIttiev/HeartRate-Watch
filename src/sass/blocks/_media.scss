@@ -83,10 +83,6 @@
 
 
   .advantages {
-    &__title {
-      font-size: 25px;
-    }
-
     &__item {
       width: 218px;
       font-size: 18px;
@@ -97,8 +93,36 @@
       }
     }
   }
-}
 
+  .title {
+    font-size: 25px;
+
+    &_left {
+      font-size: 22px;
+      text-align: center;
+      margin: 0 auto;
+      width: 400px;
+    }
+  }
+
+  .consultation {
+    &__descr {
+      margin: 45px auto 40px auto;
+      font-size: 18px;
+      width: 328px;
+      text-align: center;
+    }
+  }
+
+  .consult-form {
+    width: 290px;
+    margin: 0 auto;
+
+    input {
+      height: 47px;
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   .container {
@@ -160,6 +184,10 @@
 
   .title {
     font-size: 23px;
+
+    &_left {
+      font-size: 22px;
+    }
   }
 }
 
@@ -232,6 +260,19 @@
 
   .title {
     font-size: 20px;
+
+    &_left {
+      width: 305px;
+      font-size: 16px;
+      margin-bottom: 60px;
+    }
   }
 
+  .consultation {
+    min-height: 580px;
+
+    &__descr {
+      display: none;
+    }
+  }
 }
