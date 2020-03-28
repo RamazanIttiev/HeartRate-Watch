@@ -34,6 +34,17 @@
   }
 }
 
+.catalog-item__btn {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 131px;
+  height: 40px;
+  background-color: $main-color;
+  border-radius: 5.0px;
+}
+
 /**************** TITLES ***************/
 
 .title {
@@ -41,9 +52,11 @@
   font-weight: 700;
   color: $second-color;
   text-align: center;
+  text-transform: uppercase;
+  ;
 
   &_left {
-    width: 700px;
+    width: 774px;
     font-size: 36px;
     color: #ffffff;
     text-align: left;
