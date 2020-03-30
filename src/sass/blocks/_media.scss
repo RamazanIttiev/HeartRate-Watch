@@ -81,7 +81,6 @@
     }
   }
 
-
   .advantages {
     &__item {
       width: 218px;
@@ -120,6 +119,53 @@
 
     input {
       height: 47px;
+    }
+  }
+
+  .catalog {
+    &__content-wrapper {
+      justify-content: space-evenly;
+    }
+
+    &__tabs {
+      &-item {
+        &:hover {
+          box-shadow: none;
+          border: 2.0px solid #d0d0d0;
+        }
+      }
+    }
+  }
+
+  .catalog-card {
+    &:nth-child(3) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(4) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(5) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(6) {
+      margin-top: 20px;
+    }
+  }
+
+  .feedback {
+    &__text {
+      margin-left: 30px;
+      padding-right: 15px;
+    }
+  }
+
+  .footer {
+    &__info {
+      width: 420px;
+      height: 255px;
     }
   }
 }
@@ -187,6 +233,108 @@
 
     &_left {
       font-size: 22px;
+    }
+  }
+
+  .catalog {
+    &__tabs {
+      width: 485px;
+
+      &-item {
+        width: 153px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .catalog-card {
+    width: 240px;
+
+    &:nth-child(3) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(4) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(5) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(6) {
+      margin-top: 20px;
+    }
+
+    &__img {
+      width: 130px;
+      height: 180px;
+    }
+
+    &__descr {
+      font-size: 13px;
+    }
+
+    &__link {
+      font-size: 13px;
+    }
+
+    &__old-price {
+      font-size: 12px;
+    }
+
+    &__new-price {
+      font-size: 18px;
+    }
+
+    &__btn {
+      width: 100px;
+    }
+  }
+
+  .feedback {
+    &__img {
+      width: 120px;
+      height: 120px;
+    }
+
+    &__text {
+      margin-left: 18px;
+      padding-right: 0px;
+    }
+
+    &__name {
+      font-size: 17px;
+    }
+
+    &__descrip {
+      font-size: 14px;
+    }
+  }
+
+  .footer {
+    &__info {
+      width: 360px;
+      height: 210px;
+    }
+
+    &__addr {
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    &__phone {
+      margin-bottom: 25px;
+      font-size: 17px;
+    }
+
+    &__social-item {
+      width: 40px;
+      height: 40px;
+
+      img {
+        height: 20px;
+      }
     }
   }
 }
@@ -270,8 +418,40 @@
 
   .consultation {
     min-height: 580px;
- 
+
     &__descr {
+      display: none;
+    }
+  }
+
+  .catalog {
+    &__tabs {
+      width: 310px;
+      align-items: center;
+      flex-direction: column;
+
+      &-item {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .catalog-card {
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+
+  .feedback {
+    &__fb {
+      margin-top: 50px;
+    }
+
+    &__img {
       display: none;
     }
   }

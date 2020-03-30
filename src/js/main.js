@@ -1,4 +1,4 @@
-
+// !!!!!!!!!!!!! SLIDER !!!!!!!!!!!!!!!
 
 const slider = tns({
   container: '.slider__inner',
@@ -8,5 +8,36 @@ const slider = tns({
     '<img src="icons/arrow_left.svg">',
     '<img src="icons/arrow_right.svg">'
   ],
-  nav: false
+  nav: false,
+  responsive: {
+    320: {
+      controls: false,
+
+    }
+  }
+});
+
+// !!!!!!!!!!!!! TABS !!!!!!!!!!!!!!!
+
+$(function () {
+
+  $('ul.catalog__tabs').on('click', 'li:not(.catalog__tabs-item_active)', function () {
+    $(this)
+      .addClass('catalog__tabs-item_active').siblings().removeClass('catalog__tabs-item_active')
+      .closest('div.container').find('div.catalog__content-wrapper').removeClass('catalog__content-wrapper_active').eq($(this).index()).addClass('catalog__content-wrapper_active');
+  });
+
+  function toggleSlide(item) {
+    $(item).each(function (i) {
+      $(this).on('click', function (prevent) {
+        prevent.preventDefault();
+        $('.catalog-card__content').eq(i).toggleClass('catalog-card__content_active');
+        $('.catalog-card__list').eq(i).toggleClass('catalog-card__list_active');
+      })
+    })
+  }
+
+  toggleSlide('.catalog-card__link');
+  toggleSlide('.catalog-card__back');
+
 });
