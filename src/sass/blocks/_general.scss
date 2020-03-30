@@ -187,14 +187,14 @@
     margin: 0 auto;
   }
 
-  [data-controls="prev"],
-  [data-controls="next"] {
+  .prev,
+  .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -66px;
+    left: 40px;
     border: none;
-    background-color: #fff;
+    background-color: transparent;
 
     img {
       width: 31px;
@@ -202,8 +202,8 @@
     }
   }
 
-  [data-controls="next"] {
-    right: -66px;
+  .next {
+    right: 40px;
     left: auto;
   }
 
@@ -211,6 +211,7 @@
     img {
       display: block;
       margin: 0 auto;
+      width: 600px;
     }
   }
 }
@@ -266,6 +267,7 @@
     display: none;
     flex-wrap: wrap;
     justify-content: space-between;
+
     &_active {
       display: flex;
     }
@@ -284,18 +286,6 @@
   &__img {
     max-width: 100%;
   }
-
-  // &:nth-child(4) {
-  //   margin-top: 25px;
-  // }
-
-  // &:nth-child(5) {
-  //   margin-top: 25px;
-  // }
-
-  // &:nth-child(6) {
-  //   margin-top: 25px;
-  // }
 
   &__img {
     width: 140px;
@@ -332,6 +322,7 @@
       color: $main-color;
     }
   }
+
   hr {
     background-color: #e8e8e8;
     margin-top: 19px;
@@ -388,15 +379,35 @@
     text-align: initial;
     list-style-type: none;
 
+    li {
+      position: relative;
+      color: #555555;
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: $main-color;
+        left: -14px;
+        top: 8px;
+      }
+    }
+
     &_active {
       transform: translateX(-100%);
       margin-left: 0px;
+
       li {
         position: relative;
         color: #555555;
         font-size: 14px;
         font-weight: 300;
         margin-bottom: 20px;
+
         &:before {
           content: "";
           position: absolute;
@@ -409,6 +420,7 @@
       }
     }
   }
+
   &__back {
     position: absolute;
     bottom: 0;
@@ -420,6 +432,7 @@
     font-weight: 500;
     text-decoration: underline;
     text-transform: uppercase;
+
     &:hover {
       color: $main-color;
     }
@@ -468,6 +481,17 @@
   &__text {
     margin-left: 62px;
     padding-right: 60px;
+  }
+
+  &__hr {
+    margin-top: 30px;
+    margin-bottom: 21px;
+    border-bottom: none;
+    padding: 0 230px;
+
+    &:last-child {
+      display: none;
+    }
   }
 }
 

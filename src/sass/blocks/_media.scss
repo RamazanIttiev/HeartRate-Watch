@@ -13,6 +13,25 @@
       height: 44px;
     }
   }
+
+  .feedback {
+    &__hr {
+      margin-top: 30px;
+      margin-bottom: 21px;
+      border-bottom: none;
+      padding: 0 230px;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .slider {
+    .tns-nav-active {
+      background-color: rgb(255, 0, 0);
+    }
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -122,13 +141,33 @@
     }
   }
 
+  .slider {
+    .tns-item img {
+      width: 400px;
+    }
+
+    .tns-nav-active {
+      background-color: rgb(255, 0, 0);
+    }
+
+    .prev,
+    .next {
+      display: none;
+    }
+  }
+
   .catalog {
     &__content-wrapper {
       justify-content: space-evenly;
     }
 
     &__tabs {
+      width: 600px;
+
       &-item {
+        width: 190px;
+        font-size: 16px;
+
         &:hover {
           box-shadow: none;
           border: 2.0px solid #d0d0d0;
@@ -137,28 +176,14 @@
     }
   }
 
-  .catalog-card {
-    &:nth-child(3) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(4) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(5) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(6) {
-      margin-top: 20px;
-    }
-  }
-
   .feedback {
     &__text {
       margin-left: 30px;
       padding-right: 15px;
+    }
+
+    &__hr {
+      padding: 0 200px;
     }
   }
 
@@ -236,6 +261,12 @@
     }
   }
 
+  .slider {
+    .tns-nav-active {
+      background-color: rgb(255, 0, 0);
+    }
+  }
+
   .catalog {
     &__tabs {
       width: 485px;
@@ -249,22 +280,6 @@
 
   .catalog-card {
     width: 240px;
-
-    &:nth-child(3) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(4) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(5) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(6) {
-      margin-top: 20px;
-    }
 
     &__img {
       width: 130px;
@@ -424,7 +439,19 @@
     }
   }
 
+  .slider {
+    .tns-item img {
+      width: 300px;
+    }
+
+    .tns-nav-active {
+      background-color: rgb(255, 0, 0);
+    }
+  }
+
   .catalog {
+    padding: 20px 0 40px 0;
+
     &__tabs {
       width: 310px;
       align-items: center;
@@ -441,8 +468,10 @@
   }
 
   .catalog-card {
-    &:nth-child(2) {
-      margin-top: 20px;
+    width: 340px;
+
+    &__descr {
+      padding: 0 20px;
     }
   }
 
@@ -453,6 +482,24 @@
 
     &__img {
       display: none;
+    }
+
+    &__hr {
+      margin-top: 30px;
+      margin-bottom: 21px;
+      border-bottom: none;
+      padding: 0 70px 0 18px;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    &__info {
+      padding: 40px 30px 60px 30px;
+      width: 100%;
     }
   }
 }
