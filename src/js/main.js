@@ -17,21 +17,21 @@ const slider = tns({
   }
 });
 
-document.querySelector(".prev").onclick = function() {
+document.querySelector(".prev").onclick = function () {
   slider.goTo("prev");
 };
 
-document.querySelector(".next").onclick = function() {
+document.querySelector(".next").onclick = function () {
   slider.goTo("next");
 };
 
 // !!!!!!!!!!!!! TABS !!!!!!!!!!!!!!!
 
-$(function() {
+$(function () {
   $("ul.catalog__tabs").on(
     "click",
     "li:not(.catalog__tabs-item_active)",
-    function() {
+    function () {
       $(this)
         .addClass("catalog__tabs-item_active")
         .siblings()
@@ -45,8 +45,8 @@ $(function() {
   );
 
   function toggleSlide(item) {
-    $(item).each(function(i) {
-      $(this).on("click", function(prevent) {
+    $(item).each(function (i) {
+      $(this).on("click", function (prevent) {
         prevent.preventDefault();
         $(".catalog-card__content")
           .eq(i)
@@ -63,22 +63,71 @@ $(function() {
 
   // !!!!!!!!!!!!! MODAL !!!!!!!!!!!!!!!
 
-  $("[data-modal=consultation]").on("click", function() {
+  $("[data-modal=consultation]").on("click", function () {
     $(".overlay, #consultation").fadeIn("slow");
   });
 
-  $(".modal__close").on("click", function() {
+  $(".modal__close").on("click", function () {
     $(".overlay, #consultation, #thanks, #order").fadeOut("fast");
   });
 
-  $(".catalog-card__btn").each(function(i) {
-    $(this).on("click", function() {
+  $(".catalog-card__btn").each(function (i) {
+    $(this).on("click", function () {
       $("#order .modal__descr").text(
         $(".catalog-card__subtitle")
-          .eq(i)
-          .text()
+        .eq(i)
+        .text()
       );
       $(".overlay, #order").fadeIn("slow");
     });
   });
+
+  // $("#consultation-form").validate();
+  // $("#order form").validate();
+  // $("#consultation form").validate({
+  //   rules: {
+  //     name: 'required',
+  //     phone: 'required',
+  //     email: {
+  //       required: true,
+  //       email: true
+  //     }
+  //   },
+  //   messages: {
+  //     name: "Please, enter your name",
+  //     phone: "Please, enter your phone number",
+  //     email: {
+  //       required: "Please, enter your email",
+  //       email: "That email is incorrect (name@domain.com)"
+  //     }
+  //   }
+  // });
+
+  function validateForm(form) {
+    $(form).validate({
+      rules: {
+        name: 'required',
+        phone: 'required',
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: "Please, enter your name",
+        phone: "Please, enter your phone number",
+        email: {
+          required: "Please, enter your email",
+          email: "That email is incorrect (name@domain.com)"
+        }
+      }
+    });
+  }
+
+
+  validateForm("#consultation-form");
+  validateForm("#order form");
+  validateForm("#consultation form")
+
+
 });
