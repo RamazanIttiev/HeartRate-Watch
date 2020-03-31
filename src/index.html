@@ -108,10 +108,10 @@
       <h2 class="consultation__descr">
         Просто заполните форму заявки и мы перезвоним вам в течении 10 минут
       </h2>
-      <form action="#" class="consult-form">
-        <input required type="text" placeholder="Ваше имя" />
-        <input required type="number" placeholder="Ваш телефон" />
-        <input required type="email" placeholder="Ваш E-mail" />
+      <form id="consultation-form" action="#" class="consult-form">
+        <input name="name" placeholder="Ваше имя" />
+        <input name="phone" placeholder="Ваш телефон" />
+        <input name="email" placeholder="Ваш E-mail" />
         <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
       </form>
     </div>
@@ -607,9 +607,9 @@
       <div class="modal__subtitle">Просто заполните форму заявки</div>
       <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
       <form action="#" class="consult-form consult-form_modal">
-        <input required type="text" placeholder="Ваше имя" />
-        <input required type="number" placeholder="Ваш телефон" />
-        <input required type="email" placeholder="Ваш E-mail" />
+        <input name="name" placeholder="Ваше имя" type="text" />
+        <input name="phone" placeholder="Ваш телефон" type="number" />
+        <input name="email" placeholder="Ваш E-mail" type="email" />
         <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
       </form>
     </div>
@@ -620,9 +620,9 @@
       <div class="modal__subtitle">Ваш заказ:</div>
       <div class="modal__descr">Пульсометр Polar FT1</div>
       <form action="#" class="consult-form consult-form_modal">
-        <input required type="text" placeholder="Ваше имя" />
-        <input required type="number" placeholder="Ваш телефон" />
-        <input required type="email" placeholder="Ваш E-mail" />
+        <input name="name" placeholder="Ваше имя" type="text" />
+        <input name="phone" placeholder="Ваш телефон" type="number" />
+        <input name="email" placeholder="Ваш E-mail" type="email" />
         <button class="button button_submit">Купить</button>
       </form>
     </div>
@@ -635,11 +635,15 @@
   </div>
 
   <!--!!!!!!!!!!!!!  SCRIPTS !!!!!!!!!!!!!!!1-->
+
   <script>
-    src = "./js/jquery.maskedinput.min.js"
+    src = "js/jquery.maskedinput.min.js"
   </script>
+  <!-- buttons and modals activation -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
