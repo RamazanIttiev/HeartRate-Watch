@@ -1,3 +1,10 @@
+@import "../libs/font";
+@import "../libs/bootstrap-reboot.min";
+@import "../libs/animate";
+
+@import "../base/variables";
+@import "../base/animation";
+
 * {
   font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -8,8 +15,11 @@
   margin: 0 auto;
 }
 
-@import "../base/variables";
-@import "../base/mixins";
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
 @import "../blocks/blocks";
 @import "../blocks/general";
 @import "../blocks/media";

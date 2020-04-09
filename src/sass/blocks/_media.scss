@@ -91,6 +91,7 @@
         text-decoration: underline;
       }
     }
+
   }
 
   .button {
@@ -119,7 +120,6 @@
       font-size: 22px;
       text-align: center;
       margin: 0 auto;
-      width: 400px;
     }
   }
 
@@ -204,6 +204,12 @@
         }
       }
     }
+  }
+
+  .arrow-up {
+    right: 5px;
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -424,7 +430,6 @@
     font-size: 20px;
 
     &_left {
-      width: 305px;
       font-size: 16px;
       margin-bottom: 60px;
     }
