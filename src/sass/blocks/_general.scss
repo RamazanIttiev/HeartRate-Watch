@@ -395,7 +395,7 @@
       margin-bottom: 20px;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         width: 5px;
         height: 5px;
@@ -417,7 +417,7 @@
         margin-bottom: 20px;
 
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           width: 5px;
           height: 5px;
@@ -578,9 +578,8 @@
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(0, 0, 0, .56);
+  background-color: rgba(0, 0, 0, 0.56);
 }
-
 
 .modal {
   position: absolute;

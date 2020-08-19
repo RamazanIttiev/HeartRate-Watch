@@ -8,8 +8,10 @@
   margin: 0 auto;
 }
 
-@import "../base/variables";
-@import "../base/mixins";
-@import "../blocks/blocks";
-@import "../blocks/general";
-@import "../blocks/media";
+@import '../base/variables';
+@import '../base/mixins';
+@import '../blocks/blocks';
+@import '../blocks/bootstrap-reboot.min';
+@import '../blocks/font';
+@import '../blocks/general';
+@import '../blocks/media';
